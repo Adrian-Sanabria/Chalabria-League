@@ -1,0 +1,341 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chalabria League</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* HEADER */
+.header {
+    background: #020617;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.header-top img {
+    width: 50px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #38bdf8;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.nav button {
+    background: #1e293b;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav button.active {
+    background: #38bdf8;
+    color: black;
+}
+
+/* CONTENEDOR */
+.container {
+    padding: 20px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th, td {
+    padding: 6px;
+    text-align: center;
+}
+
+th {
+    background: #38bdf8;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background: #0f172a;
+}
+
+/* TOP 2 CLASIFICADOS */
+.top td {
+    background: rgba(34, 197, 94, 0.35) !important;
+    color: white;
+    font-weight: bold;
+}
+
+/* MATCH */
+.match {
+    background: #1e293b;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* BRACKET */
+.bracket {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.col {
+    width: 30%;
+}
+
+.col h3 {
+    text-align: center;
+    color: #38bdf8;
+}
+
+/* FINAL */
+.final {
+    margin-top: 80px;
+    background: gold;
+    color: black;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media(max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bracket {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <div class="header-top">
+        <img src="{% static 'logos/Logo_Chalabria.png' %}">
+        <h1>Chalabria League</h1>
+    </div>
+
+```
+<div class="nav">
+    <button onclick="showTab('grupos')" class="active">Grupos</button>
+    <button onclick="showTab('eliminatorias')">Eliminatorias</button>
+</div>
+```
+
+</div>
+
+<div class="container">
+
+<!-- GRUPOS -->
+
+<div id="grupos">
+
+```
+<div class="grid">
+{% for grupo in grupos %}
+    <div class="card">
+        <h3>Grupo {{ grupo.nombre }}</h3>
+
+        <table class="tabla-grupo">
+            <thead>
+                <tr>
+                    <th>Equipo</th>
+                    <th>PJ</th>
+                    <th>G</th>
+                    <th>E</th>
+                    <th>P</th>
+                    <th>GF</th>
+                    <th>GC</th>
+                    <th>DG</th>
+                    <th>Pts</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            {% for ge in grupo.tabla %}
+                <tr>
+                    <td>
+                        {% if ge.equipo.logo %}
+                            <img src="{{ ge.equipo.logo.url }}" width="20">
+                        {% endif %}
+                        {{ ge.equipo.nombre }}
+                    </td>
+                    <td>{{ ge.pj }}</td>
+                    <td>{{ ge.g }}</td>
+                    <td>{{ ge.e }}</td>
+                    <td>{{ ge.p }}</td>
+                    <td>{{ ge.gf }}</td>
+                    <td>{{ ge.gc }}</td>
+                    <td>{{ ge.dg }}</td>
+                    <td>{{ ge.puntos }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endfor %}
+</div>
+```
+
+</div>
+
+<!-- ELIMINATORIAS -->
+
+<div id="eliminatorias" style="display:none;">
+
+```
+<h2 style="text-align:center">🏆 Eliminatorias</h2>
+
+<div class="bracket">
+
+    <div class="col">
+        <h3>Cuartos</h3>
+        {% for local, visitante in cuartos_auto %}
+        <div class="match">
+            {{ local.nombre }} vs {{ visitante.nombre }}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="col">
+        <h3>Semifinal</h3>
+        {% for p in semis %}
+        <div class="match">
+            {{ p.equipo_local.nombre }} vs {{ p.equipo_visitante.nombre }}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="col">
+        <h3>Final</h3>
+        {% for p in final %}
+        <div class="match final">
+            🏆 {{ p.equipo_local.nombre }} vs {{ p.equipo_visitante.nombre }}
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+```
+
+</div>
+
+</div>
+
+<script>
+
+function showTab(tab){
+
+    document.getElementById("grupos").style.display = "none";
+    document.getElementById("eliminatorias").style.display = "none";
+
+    document.getElementById(tab).style.display = "block";
+
+    document.querySelectorAll(".nav button")
+        .forEach(btn => btn.classList.remove("active"));
+
+    event.target.classList.add("active");
+}
+
+function ordenarTabla(tabla){
+
+    let filas = Array.from(
+        tabla.querySelectorAll("tbody tr")
+    );
+
+    filas.sort((a,b)=>{
+
+        let ptsA = parseInt(a.children[8].innerText) || 0;
+        let ptsB = parseInt(b.children[8].innerText) || 0;
+
+        let dgA = parseInt(a.children[7].innerText) || 0;
+        let dgB = parseInt(b.children[7].innerText) || 0;
+
+        if(ptsA !== ptsB){
+            return ptsB - ptsA;
+        }
+
+        return dgB - dgA;
+    });
+
+    const tbody = tabla.querySelector("tbody");
+
+    filas.forEach(f => f.classList.remove("top"));
+
+    filas.forEach((fila,index)=>{
+
+        tbody.appendChild(fila);
+
+        if(index < 2){
+            fila.classList.add("top");
+        }
+
+    });
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+
+    document
+        .querySelectorAll(".tabla-grupo")
+        .forEach(tabla=>{
+            ordenarTabla(tabla);
+        });
+
+});
+
+</script>
+
+</body>
+</html>
