@@ -1,0 +1,580 @@
+[
+{
+  "model": "futbol.equipo",
+  "pk": 1,
+  "fields": {
+    "nombre": "ADRIAN CITY",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 2,
+  "fields": {
+    "nombre": "REAL OROYA",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 4,
+  "fields": {
+    "nombre": "FC QUAKERS",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 5,
+  "fields": {
+    "nombre": "AC MARIO",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 6,
+  "fields": {
+    "nombre": "PUM DE MUNICH",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 7,
+  "fields": {
+    "nombre": "ROMPE T. FC",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 8,
+  "fields": {
+    "nombre": "MAN. MENESES",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 9,
+  "fields": {
+    "nombre": "PSF",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 10,
+  "fields": {
+    "nombre": "ASTON TIMBA",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 11,
+  "fields": {
+    "nombre": "FC KAIZEN",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 13,
+  "fields": {
+    "nombre": "CUY ATLETICO",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 14,
+  "fields": {
+    "nombre": "DDA",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 15,
+  "fields": {
+    "nombre": "NOTROFEOHAM",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 16,
+  "fields": {
+    "nombre": "FC KCHACEBRAS",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 17,
+  "fields": {
+    "nombre": "JOHANTUS",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.equipo",
+  "pk": 18,
+  "fields": {
+    "nombre": "HANCERNAL",
+    "logo": ""
+  }
+},
+{
+  "model": "futbol.grupo",
+  "pk": 1,
+  "fields": {
+    "nombre": "A"
+  }
+},
+{
+  "model": "futbol.grupo",
+  "pk": 2,
+  "fields": {
+    "nombre": "B"
+  }
+},
+{
+  "model": "futbol.grupo",
+  "pk": 3,
+  "fields": {
+    "nombre": "C"
+  }
+},
+{
+  "model": "futbol.grupo",
+  "pk": 4,
+  "fields": {
+    "nombre": "D"
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 17,
+  "fields": {
+    "equipo": 2,
+    "grupo": 1,
+    "pj": 4,
+    "g": 2,
+    "e": 2,
+    "p": 0,
+    "gf": 7,
+    "gc": 1,
+    "puntos": 8
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 18,
+  "fields": {
+    "equipo": 9,
+    "grupo": 1,
+    "pj": 6,
+    "g": 1,
+    "e": 1,
+    "p": 4,
+    "gf": 3,
+    "gc": 10,
+    "puntos": 4
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 19,
+  "fields": {
+    "equipo": 8,
+    "grupo": 1,
+    "pj": 4,
+    "g": 1,
+    "e": 0,
+    "p": 3,
+    "gf": 4,
+    "gc": 11,
+    "puntos": 3
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 20,
+  "fields": {
+    "equipo": 4,
+    "grupo": 1,
+    "pj": 4,
+    "g": 3,
+    "e": 1,
+    "p": 0,
+    "gf": 8,
+    "gc": 0,
+    "puntos": 10
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 21,
+  "fields": {
+    "equipo": 5,
+    "grupo": 2,
+    "pj": 3,
+    "g": 3,
+    "e": 0,
+    "p": 0,
+    "gf": 10,
+    "gc": 0,
+    "puntos": 9
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 22,
+  "fields": {
+    "equipo": 6,
+    "grupo": 2,
+    "pj": 3,
+    "g": 2,
+    "e": 0,
+    "p": 1,
+    "gf": 6,
+    "gc": 1,
+    "puntos": 6
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 23,
+  "fields": {
+    "equipo": 14,
+    "grupo": 2,
+    "pj": 4,
+    "g": 1,
+    "e": 1,
+    "p": 2,
+    "gf": 3,
+    "gc": 8,
+    "puntos": 4
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 24,
+  "fields": {
+    "equipo": 15,
+    "grupo": 2,
+    "pj": 4,
+    "g": 0,
+    "e": 1,
+    "p": 3,
+    "gf": 0,
+    "gc": 10,
+    "puntos": 1
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 25,
+  "fields": {
+    "equipo": 7,
+    "grupo": 3,
+    "pj": 1,
+    "g": 1,
+    "e": 0,
+    "p": 0,
+    "gf": 1,
+    "gc": 0,
+    "puntos": 3
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 26,
+  "fields": {
+    "equipo": 17,
+    "grupo": 3,
+    "pj": 2,
+    "g": 0,
+    "e": 0,
+    "p": 2,
+    "gf": 1,
+    "gc": 3,
+    "puntos": 0
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 27,
+  "fields": {
+    "equipo": 11,
+    "grupo": 3,
+    "pj": 2,
+    "g": 1,
+    "e": 1,
+    "p": 0,
+    "gf": 3,
+    "gc": 2,
+    "puntos": 4
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 28,
+  "fields": {
+    "equipo": 13,
+    "grupo": 3,
+    "pj": 1,
+    "g": 0,
+    "e": 1,
+    "p": 0,
+    "gf": 1,
+    "gc": 1,
+    "puntos": 1
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 29,
+  "fields": {
+    "equipo": 16,
+    "grupo": 4,
+    "pj": 1,
+    "g": 0,
+    "e": 0,
+    "p": 1,
+    "gf": 0,
+    "gc": 5,
+    "puntos": 0
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 30,
+  "fields": {
+    "equipo": 1,
+    "grupo": 4,
+    "pj": 3,
+    "g": 2,
+    "e": 0,
+    "p": 1,
+    "gf": 6,
+    "gc": 1,
+    "puntos": 6
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 31,
+  "fields": {
+    "equipo": 10,
+    "grupo": 4,
+    "pj": 1,
+    "g": 0,
+    "e": 0,
+    "p": 1,
+    "gf": 0,
+    "gc": 1,
+    "puntos": 0
+  }
+},
+{
+  "model": "futbol.grupoequipo",
+  "pk": 32,
+  "fields": {
+    "equipo": 18,
+    "grupo": 4,
+    "pj": 1,
+    "g": 1,
+    "e": 0,
+    "p": 0,
+    "gf": 1,
+    "gc": 0,
+    "puntos": 3
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 6,
+  "fields": {
+    "equipo_local": 4,
+    "equipo_visitante": 2,
+    "goles_local": 0,
+    "goles_visitante": 0,
+    "fase": "grupos",
+    "grupo": 1,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 7,
+  "fields": {
+    "equipo_local": 6,
+    "equipo_visitante": 15,
+    "goles_local": 4,
+    "goles_visitante": 0,
+    "fase": "grupos",
+    "grupo": 2,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 13,
+  "fields": {
+    "equipo_local": 4,
+    "equipo_visitante": 8,
+    "goles_local": 4,
+    "goles_visitante": 0,
+    "fase": "grupos",
+    "grupo": 1,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 14,
+  "fields": {
+    "equipo_local": 2,
+    "equipo_visitante": 8,
+    "goles_local": 4,
+    "goles_visitante": 1,
+    "fase": "grupos",
+    "grupo": 1,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 15,
+  "fields": {
+    "equipo_local": 6,
+    "equipo_visitante": 5,
+    "goles_local": 0,
+    "goles_visitante": 1,
+    "fase": "grupos",
+    "grupo": 2,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 16,
+  "fields": {
+    "equipo_local": 14,
+    "equipo_visitante": 5,
+    "goles_local": 0,
+    "goles_visitante": 6,
+    "fase": "grupos",
+    "grupo": 2,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 17,
+  "fields": {
+    "equipo_local": 6,
+    "equipo_visitante": 14,
+    "goles_local": 2,
+    "goles_visitante": 0,
+    "fase": "grupos",
+    "grupo": 2,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 18,
+  "fields": {
+    "equipo_local": 9,
+    "equipo_visitante": 8,
+    "goles_local": 3,
+    "goles_visitante": 0,
+    "fase": "grupos",
+    "grupo": 1,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 19,
+  "fields": {
+    "equipo_local": 13,
+    "equipo_visitante": 11,
+    "goles_local": 1,
+    "goles_visitante": 1,
+    "fase": "grupos",
+    "grupo": 3,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 20,
+  "fields": {
+    "equipo_local": 4,
+    "equipo_visitante": 9,
+    "goles_local": 1,
+    "goles_visitante": 0,
+    "fase": "grupos",
+    "grupo": 1,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 21,
+  "fields": {
+    "equipo_local": 7,
+    "equipo_visitante": 17,
+    "goles_local": 1,
+    "goles_visitante": 0,
+    "fase": "grupos",
+    "grupo": 3,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 22,
+  "fields": {
+    "equipo_local": 2,
+    "equipo_visitante": 9,
+    "goles_local": 0,
+    "goles_visitante": 0,
+    "fase": "grupos",
+    "grupo": 1,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 23,
+  "fields": {
+    "equipo_local": 11,
+    "equipo_visitante": 17,
+    "goles_local": 2,
+    "goles_visitante": 1,
+    "fase": "grupos",
+    "grupo": 3,
+    "fecha": null
+  }
+},
+{
+  "model": "futbol.partido",
+  "pk": 24,
+  "fields": {
+    "equipo_local": 14,
+    "equipo_visitante": 15,
+    "goles_local": 0,
+    "goles_visitante": 0,
+    "fase": "grupos",
+    "grupo": 2,
+    "fecha": null
+  }
+}
+]
